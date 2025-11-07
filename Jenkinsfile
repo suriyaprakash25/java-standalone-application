@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     tools {
-        jdk 'JDK17'
-        maven 'Maven3'
+        jdk 'JDK-21'
+        maven 'Maven'
     }
 
     stages {
@@ -11,7 +11,7 @@ pipeline {
             // write your logic here
             steps{
             git branch: 'main',
-            url: 'https://github.com/expertszen/java-standalone-application.git'
+            url: 'https://github.com/suriyaprakash25/java-standalone-application.git'
             }
                     
         }
@@ -43,7 +43,7 @@ pipeline {
     success {
       echo "Build succeeded — triggering downstream job"
       // trigger downstream job; wait:false => don't block. Set wait:true to wait and capture result.
-      build job: '2336460-Bhargavi-Munji-java-second-ci-job', wait: false
+      build job: '2043880-Suriyaprakash-java-first-ci-job, wait: false
     }
     failure {
       echo "Build failed — not triggering downstream job"
