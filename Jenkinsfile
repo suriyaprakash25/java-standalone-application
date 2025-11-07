@@ -43,7 +43,7 @@ pipeline {
     success {
       echo "Build succeeded — triggering downstream job"
       // trigger downstream job; wait:false => don't block. Set wait:true to wait and capture result.
-      build job: '2043880-Suriyaprakash-java-first-ci-job, wait: false
+      build job: '2043880-Suriyaprakash-java-first-ci-job', wait: false
     }
     failure {
       echo "Build failed — not triggering downstream job"
