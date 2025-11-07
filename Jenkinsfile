@@ -20,7 +20,7 @@ pipeline {
             steps{
             bat 'mvn clean compile'
             }
-        }
+     }
         stage('Run Application') {
             // write your logic here
             steps{
